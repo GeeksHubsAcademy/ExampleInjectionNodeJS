@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+    api-rest:
+      build: 
+        context: ./nodeMachine
+      command: sh -c "npm i && npm run build && npm run start"
+      volumes:
+        - ../app:/app
+      
+      ports:
+        - 80:3000
+    mongodb:
+      image: 'bitnami/mongodb:latest'
+      ports:
+        - 27017:27017
+      environment:
+        - MONGODB_USERNAME=user 
+        - MONGODB_PASSWORD=password 
+        - MONGODB_DATABASE=agenda
+
