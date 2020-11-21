@@ -1,28 +1,30 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "target": "es5",
-      "sourceMap": true,
-      "lib": [
-        "es6",
-        "dom"
-      ],
-      "types": [
-        "reflect-metadata"
-      ],
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "noUnusedLocals": true,
-      "noImplicitAny": false
-    },
-    "include": [
-      "src/**/*.ts"
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es5",
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "dom"
     ],
-    "exclude": [
-      "dist",
-      "src/**/*.spec.ts",
-      "node_modules"
-    ]
-  }
+    "types": [
+      "reflect-metadata",
+      "jest",
+      "node"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "src/**/*.spec.ts",
+    "node_modules"
+  ]
+}
