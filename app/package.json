@@ -8,6 +8,7 @@
     "build": "npm run clean; tsc",
     "build:watch": "npm run build -- -w",
     "clean": "rm -r dist",
+    "watch": "tsc -w && nodemon --watch ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

@@ -6,7 +6,6 @@ services:
       command: sh -c "npm i && npm run build && npm run start"
       volumes:
         - ../app:/app
-      
       ports:
         - 80:3000
     mongodb:
