@@ -1,0 +1,11 @@
+{
+  "type": "mongodb",
+  "host": "localhost",
+  "port": 27017,
+  "username": "user",
+  "password": "password",
+  "database": "agenda",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/app/infrastructure/persistence/entities/**/*.ts"]
+}

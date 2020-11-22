@@ -13,7 +13,6 @@ services:
       ports:
         - 27017:27017
       environment:
-        - MONGODB_USERNAME=user 
-        - MONGODB_PASSWORD=password 
+        - ALLOW_EMPTY_PASSWORD=yes
+        - MONGODB_USERNAME=user
         - MONGODB_DATABASE=agenda
-
