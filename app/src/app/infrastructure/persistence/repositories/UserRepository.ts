@@ -1,7 +1,7 @@
 import { injectable } from "inversify";
 import { UserDto } from '../../../domain/dtos/UserDTO';
 import { IUserRepository } from '../../../domain/repositories/IUserRepository';
-import { UserEntity } from '../entities/UserEntity.entity';
+import { UserEntity } from '../entities/User.entity';
 import { ConnectionService } from '../config/Connection-Service';
 
 

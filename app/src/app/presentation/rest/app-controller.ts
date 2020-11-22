@@ -28,7 +28,7 @@ export class HelloController {
         new Date()
         )
    );
-   res.sendStatus(200).json({"message":"Usario creado"});
+   res.status(200).json({"message":"Usario creado"});
     }catch(error){
       res.status(400).json({error:error.message});
     }
