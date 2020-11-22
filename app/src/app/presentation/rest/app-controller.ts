@@ -6,6 +6,6 @@ export class HelloController {
   constructor(){}
   @httpGet('/')
   public helloWorld(request:any, response:Response){
-      response.send("Hello World");
+      response.send("Hello World2S");
   }
 }
