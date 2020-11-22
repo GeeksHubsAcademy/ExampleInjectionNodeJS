@@ -14,9 +14,14 @@ export class UserService implements IUserService
   ){
 
   }
+  async listUsers(): Promise<User[]> {
+    const usersDTO = await this.userRepo.findAll();
+    return usersDTO.map(this.toUser);
+  }
 
   async addUser(user: User): Promise<User> {
 
+    user.hashPassword();
     const userDto = this.toUserDTO(user);
     const createUserDTO = await this.userRepo.create(userDto);
     return this.toUser(createUserDTO);

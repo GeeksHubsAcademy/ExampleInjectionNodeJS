@@ -5,6 +5,7 @@ import { InversifyExpressServer } from 'inversify-express-utils';
 
 // IoC
 import container from './container-io';
+import { createConnection } from 'typeorm';
 
 
 // start the server
@@ -30,7 +31,8 @@ server.setConfig((App: any) => {
         }))
         .use('/apidoc', Express.static('apidoc'));
 });
-
+createConnection().then(async connection=> console.log("Connexión creada"))
+.catch(error=>console.error(error));
 const app = server.build();
 
 // Starts the app

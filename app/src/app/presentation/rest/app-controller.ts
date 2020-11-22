@@ -15,7 +15,12 @@ export class HelloController {
       response.send("Hello World2S");
   }
 
-  @httpPost("/")
+  @httpGet('/users')
+  public async listUsers(){
+    return this.userService.listUsers();
+  }
+
+  @httpPost("/users")
   public async createUser(@request() req: Request, @response() res: Response){
 
     try{
